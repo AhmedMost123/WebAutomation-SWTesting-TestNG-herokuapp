@@ -1,5 +1,6 @@
 package Pages;
 
+import Pages.Dynamic.DynamicLoadingPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,9 +14,14 @@ public HomePage(WebDriver driver){
     By checkboxLocator=By.linkText("Checkboxes");
     By javascriptAlertsLocator=By.linkText("JavaScript Alerts");
     By dropdownLocator=By.linkText("Dropdown");
+    By DynamicLoadingLocator=By.linkText("Dynamic Loading");
     public LoginPage clickFormAuth(){
         driver.findElement(formAuthLocator).click();
         return new LoginPage(driver);
+    }
+    public DynamicLoadingPage clickDynamicLoading(){
+        driver.findElement(DynamicLoadingLocator).click();
+        return new DynamicLoadingPage(driver);
     }
     public AddRemoveElementsPage clickAddRemoveLink(){
         driver.findElement(addRemoveLocator).click();

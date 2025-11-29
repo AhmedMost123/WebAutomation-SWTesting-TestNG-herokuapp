@@ -1,6 +1,8 @@
 package BaseTest;
 
 import Pages.*;
+import Pages.Dynamic.Ex1Page;
+import Pages.Dynamic.Ex2Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -16,6 +18,9 @@ public class BaseTest {
     protected CheckboxPage checkboxPage;
     protected JavaScriptAlertsPage javaScriptAlertsPage;
     protected DropdownPage dropdownPage;
+    protected Ex1Page ex1Page;
+    protected Ex2Page ex2Page;
+
     @BeforeMethod
     public void setup(){
         driver=new ChromeDriver();
